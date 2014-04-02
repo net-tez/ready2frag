@@ -1,0 +1,8 @@
+/vendor
+composer.lock
+
+/pages
+/css
+/font
+/img
+/js
