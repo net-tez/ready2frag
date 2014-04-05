@@ -34,22 +34,27 @@
                             </button>
                             <a class="navbar-brand" href="{{ link.pages.home }}">Ready2Frag</a>
                         </div>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="{{ link.pages.about.dc }}">Datacenter &amp; Network</a></li>
-                                    <li><a href="{{ link.pages.about.features }}">Features</a></li>
-                                    <li><a href="{{ link.pages.about.contact }}">Contact Us</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="{{ link.pages.game_servers }}">Gaming</a>
-                            </li>
-                            <li>
-                                <a href="{{ link.pages.dedicated_servers }}">VPS</a>
-                            </li>
-                        </ul>
+                        <div id="page-navigation" class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                 <li class="dropdown">
+                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us</a>
+                                     <ul class="dropdown-menu">
+                                         <li><a href="{{ link.pages.about.dc }}">Datacenter &amp; Network</a></li>
+                                         <li><a href="{{ link.pages.about.features }}">Features</a></li>
+                                         <li><a href="{{ link.pages.about.contact }}">Contact Us</a></li>
+                                     </ul>
+                                 </li>
+                                 <li>
+                                     <a href="{{ link.pages.game_servers }}">Gaming</a>
+                                 </li>
+                                 <li>
+                                     <a href="{{ link.pages.dedicated_servers }}">Dedicated</a>
+                                 </li>
+                                 <li>
+                                     <a href="{{ link.pages.vps }}">VPS</a>
+                                 </li>
+                             </ul>
+                         </div>
                     </div>
                 </nav>
             </div>
