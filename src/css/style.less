@@ -1,5 +1,6 @@
 @import "../../bower_components/bootstrap/less/bootstrap.less";
 @import "../../bower_components/font-awesome/less/font-awesome.less";
+@import "flags.less";
 
 @fa-font-path:               "../font";
 
@@ -138,7 +139,7 @@ html, body {
 
     .dropdown-menu {
         border: none;
-        box-shadow: inset 0 -2px 0 red;
+        box-shadow: inset 0 -2px 0 @brand-primary;
 
         a {
             padding: 7px 20px;
@@ -518,4 +519,53 @@ p.focused {
     clear: both;
     margin: 15px 0 -15px -15px;
     background-size: contain;
+}
+
+.plantable {
+    text-align: center;
+    border-spacing: 3px;
+    border-collapse: separate;
+
+    td, th {
+        padding: 5px;
+    }
+
+    thead td {
+        width: 1%;
+        font-size: 2em;
+        font-weight: 200;
+        background: @brand-primary;
+        margin: 5px;
+        color: #fff;
+
+        &:first-child {
+            background: none;
+        }
+    }
+
+    .price td {
+        font-size: 2em;
+        font-weight: 300;
+
+        small {
+            font-size: 0.75em;
+            color: #999;
+        }
+    }
+
+    tbody {
+        th {
+            font-size: 1.2em;
+            font-weight: 300;
+            background: #fafafa;
+        }
+
+        tr:last-child th {
+            background: none;
+        }
+
+        tr:nth-child(even) td {
+            background: #fafafa;
+        }
+    }
 }
