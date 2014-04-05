@@ -17,13 +17,26 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'src',
-          src: ['**/*.{jpg,ico,gif,png,js,eot,svg,ttf,woff,php,html}'],
+          src: ['**/*.{jpg,ico,gif,png,js,eot,svg,ttf,woff,php}'],
           dest: 'dist'
+        }, {
+          expand: true,
+          cwd: 'src',
+          src: ['*.html'],
+          dest: 'dist/pages'
+        }, {
+          expand: true,
+          cwd: 'bower_components/font-awesome/fonts',
+          src: ['**'],
+          dest: 'dist/font'
         }, {
           expand: true,
           cwd: '.tmp/js',
           src: ['**/*.js'],
           dest: 'dist/js'
+        }, {
+          src: 'bower_components/fit.js/fit.js',
+          dest: 'dist/js/fit.js'
         }]
       },
       dist: {
@@ -32,6 +45,14 @@ module.exports = function(grunt) {
           cwd: 'src',
           src: ['**/*.{ico,eot,woff,ttf,php}'],
           dest: 'dist'
+        }, {
+          expand: true,
+          cwd: 'bower_components/font-awesome/fonts',
+          src: ['*.{eot,ttf,woff}'],
+          dest: 'dist/font'
+        }, {
+          src: 'bower_components/fit.js/fit.min.js',
+          dest: 'dist/js/fit.js'
         }]
       }
     },
@@ -45,7 +66,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'src',
           src: ['**/*.html'],
-          dest: 'dist',
+          dest: 'dist/pages',
           ext: '.html'
         }]
       }
@@ -93,6 +114,11 @@ module.exports = function(grunt) {
           cwd: 'src',
           src: ['**/*.svg'],
           dest: 'dist',
+        }, {
+          expand: true,
+          cwd: 'bower_components/font-awesome/fonts',
+          src: ['*.svg'],
+          dest: 'dist/font'
         }]
       }
     },
@@ -136,7 +162,7 @@ module.exports = function(grunt) {
       watch: ['watch:copy', 'watch:less', 'watch:coffee']
     },
     clean: {
-      statics: ['dist'],
+      statics: ['dist/css', 'dist/img', 'dist/font', 'dist/js', 'dist/pages'],
       pack: ['dist.zip'],
       postbuild: ['.tmp']
     },
