@@ -155,12 +155,25 @@ html, body {
 
 .slide {
     position: relative;
+    height: 239px;
+    background-size: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slide-plan {
+    height: 150px;
+
+    h1 {
+        margin: 0 50px;
+        line-height: 150px;
+        font-size: 4em;
+        color: #fff;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+    }
 }
 
 .slide1 {
     background: url('../img/slide-1.jpg');
-    height: 239px;
-    background-size: cover;
 
     a {
         position: absolute;
@@ -186,6 +199,10 @@ html, body {
     margin: 20px 0;
     padding: (@grid-gutter-width * 0.5);
     box-shadow: inset 0 2px 0 @brand-primary, 0 10px 30px rgba(0, 0, 0, 0.1);
+
+    &.content-nmt {
+        margin-top: 0;
+    }
 }
 
 .shaded-bar {
@@ -240,7 +257,7 @@ html, body {
 h1 {
     font-size: 3em;
 
-    &:first-child {
+    .content &:first-child {
         margin: 0 0 10px;
     }
 }
@@ -485,4 +502,20 @@ footer {
         list-style-type: none;
         margin-bottom: 10px;
     }
+}
+
+p.focused {
+    margin: 0 10px 20px;
+    background: #eee;
+    padding: 10px;
+    font-size: 1.1em;
+}
+
+.order-graphic {
+    display: block;
+    background: url('/img/order-graphic.jpg') left bottom no-repeat;
+    min-height: 222px;
+    clear: both;
+    margin: 15px 0 -15px -15px;
+    background-size: contain;
 }

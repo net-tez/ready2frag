@@ -1,13 +1,8 @@
-{% extends "layout.html" %}
+{% extends "layout/layout.html" %}
 
 {% block content %}
         <div class="container">
-            <div class="intro-slideshow">
-                <div class="slide slide1">
-                    <a href="{{ link.pages.game_servers }}">Game Server Plans</a>
-                </div>
-            </div>
-            <div class="content">
+            <div class="content content-nmt">
                 <div class="row">
                     <div class="col-sm-8">
                         <h1>Game Servers</h1>
@@ -144,24 +139,7 @@
                         </div>
                     </div>
                     <div class="col-sm-4">
-                        <h3>Features</h3>
-                        <ul class="iconed-list">
-                            <li><i class="fa fa-gear"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, voluptatum, totam.</li>
-                            <li><i class="fa fa-gear"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, voluptatum, totam.</li>
-                            <li><i class="fa fa-gear"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, voluptatum, totam.</li>
-                            <li><i class="fa fa-gear"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, voluptatum, totam.</li>
-                            <li><i class="fa fa-gear"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, voluptatum, totam.</li>
-                            <li><i class="fa fa-gear"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, voluptatum, totam.</li>
-                        </ul>
-                        <h3>Testimonials</h3>
-                        <div class="testimonial">
-                            <p>&quot;Integer fringilla interdum pharetra. Mauris ac felis dignissim metus feugiat tempor. Duis euismod tincidunt sapien, et lacinia tellus ultricies at.&quot;</p>
-                            <span>Joe, <small>CraftMineNetworksCraft</small></span>
-                        </div>
-                        <div class="testimonial">
-                            <p>&quot;Integer fringilla interdum pharetra. Mauris ac felis dignissim metus feugiat tempor. Duis euismod tincidunt sapien, et lacinia tellus ultricies at.&quot;</p>
-                            <span>Joe, <small>CraftMineNetworksCraft</small></span>
-                        </div>
+                        {{ include('layout/gaming-sidebar.html') }}
                     </div>
                 </div>
                 <div class="clearfix"></div>
