@@ -47,27 +47,17 @@ module.exports = function(grunt) {
           dest: 'dist'
         }, {
           expand: true,
+          cwd: 'src',
+          src: ['*.html'],
+          dest: 'dist/pages'
+        }, {
+          expand: true,
           cwd: 'bower_components/font-awesome/fonts',
           src: ['*.{eot,ttf,woff}'],
           dest: 'dist/font'
         }, {
           src: 'bower_components/fit.js/fit.min.js',
           dest: 'dist/js/fit.js'
-        }]
-      }
-    },
-    htmlmin: {
-      dist: {
-        options: {
-          removeComments: true,
-          collapseWhitespace: true
-        },
-        files: [{
-          expand: true,
-          cwd: 'src',
-          src: ['**/*.html'],
-          dest: 'dist/pages',
-          ext: '.html'
         }]
       }
     },
@@ -158,7 +148,7 @@ module.exports = function(grunt) {
     },
     concurrent: {
       dev: ['copy:dev', 'less:dev'],
-      dist: ['copy:dist', 'less:dist', 'imagemin:dist', 'uglify:dist', 'svgmin:dist', 'htmlmin:dist'],
+      dist: ['copy:dist', 'less:dist', 'imagemin:dist', 'uglify:dist', 'svgmin:dist'],
       watch: ['watch:copy', 'watch:less', 'watch:coffee']
     },
     clean: {
@@ -187,7 +177,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');

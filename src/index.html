@@ -1,61 +1,10 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ready2Frag</title>
-    <link rel="stylesheet" href="css/style.css">
+{% extends "layout.html" %}
 
-    <script type="text/javascript" src="//use.typekit.net/ned2mke.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-</head>
-<body>
-    <div id="page-wrap">
-        <div class="linkbar">
-            <div class="container">
-                <div class="pull-left">
-                    <a href="" class="fa fa-twitter"></a>
-                    <a href="" class="fa fa-facebook"></a>
-                    <a href="" class="fa fa-envelope"></a>
-                </div>
-                <div class="pull-right">
-                    <a href="" class="nav-item">Panel Login</a>
-                    <a href="" class="nav-item">Client Area</a>
-                </div>
-            </div>
-        </div>
-        <div class="navigation">
-            <nav class="navbar navbar-default" role="navigation">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#page-navigation">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="fa fa-bars"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">Ready2Frag</a>
-                    </div>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="">Datacenters &amp; Network</a></li>
-                                <li><a href="">Ready2Frag Features</a></li>
-                                <li><a href="">Contact Us</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Gaming</a>
-                        </li>
-                        <li>
-                            <a href="#">VPS</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+{% block content %}
         <div class="container">
             <div class="intro-slideshow">
                 <div class="slide slide1">
-                    <a href="">Game Server Plans</a>
+                    <a href="{{ link.pages.game_servers }}">Game Server Plans</a>
                 </div>
             </div>
             <div class="content">
@@ -68,7 +17,7 @@
                         </ul>
                     </div>
                     <div class="col-sm-4">
-                        <a class="btn btn-light btn-block">Contact Sales</a>
+                        <a class="btn btn-light btn-block" href="{{ link.pages.about.contact }}">Contact Sales</a>
                     </div>
                 </div>
                 <div class="row">
@@ -91,21 +40,21 @@
                         </div>
                         <div class="clearfix"></div>
                         <div class="col-sm-4 service-button">
-                            <a href="">
+                            <a href="{{ link.pages.dedicated_servers }}">
                                 <i class="fa fa-power-off"></i>
                                 <h3>Dedicated Servers</h3>
                                 <span>Configure</span>
                             </a>
                         </div>
                         <div class="col-sm-4 service-button">
-                            <a href="">
+                            <a href="{{ link.pages.game_servers }}">
                                 <i class="fa fa-gamepad"></i>
                                 <h3>Game Servers</h3>
                                 <span>Plans</span>
                             </a>
                         </div>
                         <div class="col-sm-4 service-button">
-                            <a href="">
+                            <a href="{{ link.pages.vps }}">
                                 <i class="fa fa-cloud"></i>
                                 <h3>Virtual Private Servers</h3>
                                 <span>Plans</span>
@@ -135,58 +84,4 @@
                 </div>
             </div>
         </div>
-    </div>
-    <footer>
-        <div class="container">
-            <div class="content">
-                <div class="row">
-                    <div class="col-sm-3">
-                        <h2>About Us</h2>
-                        <ul>
-                            <li><a href="">Datacenter &amp; Network</a></li>
-                            <li><a href="">Features</a></li>
-                            <li><a href="">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-3">
-                        <h2>Services</h2>
-                        <ul>
-                            <li><a href="">Game Servers</a></li>
-                            <li><a href="">Dedicated Servers</a></li>
-                            <li><a href="">Virtual Private Servers</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-3">
-                        <h2>Clients</h2>
-                        <ul>
-                            <li><a href="">Billing Area</a></li>
-                            <li><a href="">Game Server Panel</a></li>
-                            <li><a href="">VPS Panel</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-3">
-                        <h2>&nbsp;</h2>
-                        <ul>
-                            <li><a href="">Terms of Service</a></li>
-                            <li><a href="">Privacy Policy</a></li>
-                            <li><a href="">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row lastrow">
-                    <div class="pull-left">
-                        <a href="" class="logo"></a>
-                    </div>
-                    <div class="pull-right">
-                        <a href="">Copyright 2014</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
-    <script src="js/fit.js"></script>
-    <script src="js/ready2frag.js"></script>
-</body>
-</html>
+{% endblock %}
