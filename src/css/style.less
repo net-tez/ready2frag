@@ -181,6 +181,7 @@ html, body {
     position: relative;
     height: 239px;
     background-size: cover;
+    background-position: left center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -197,7 +198,7 @@ html, body {
 }
 
 .slide1 {
-    background: url('../img/slide-1.jpg');
+    background-image: url('../img/slide-1.jpg');
 
     a {
         position: absolute;
@@ -287,6 +288,11 @@ h1 {
 
     .content &:first-child {
         margin: 0 0 10px;
+    }
+
+    b {
+        font-weight: 300;
+        color: @brand-primary;
     }
 }
 
@@ -434,13 +440,13 @@ footer {
         list-style-type: none;
     }
 
+    div:last-child > ul {
+        border-right: none;
+    }
+
     ul {
         padding: 0;
         margin: 0 -15px 20px 0;
-
-        div:last-child > & {
-            border-right: none;
-        }
 
         @media (min-width: @screen-sm-min) {
             border-right: 1px solid #ddd;
@@ -594,5 +600,18 @@ p.focused {
         tr:nth-child(even) td {
             background: #fafafa;
         }
+    }
+}
+
+p.center {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 300;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    margin: 0;
+
+    &:last-child {
+        border-bottom: none;
     }
 }
