@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ready2Frag - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script type="text/javascript" src="//use.typekit.net/ned2mke.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+    <div id="page-wrap">
+        {% block navigation %}
+            <div class="linkbar">
+                <div class="container">
+                    <div class="pull-left">
+                        <a href="{{ link.twitter }}" class="fa fa-twitter"></a>
+                        <a href="{{ link.facebook }}" class="fa fa-facebook"></a>
+                        <a href="{{ link.email }}" class="fa fa-envelope"></a>
+                    </div>
+                    <div class="pull-right">
+                        <a href="{{ link.panel }}" class="nav-item">Panel Login</a>
+                        <a href="{{ link.wmhcs.home }}" class="nav-item">Client Area</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#page-navigation">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="fa fa-bars"></span>
+                            </button>
+                            <a class="navbar-brand" href="{{ link.pages.home }}">Ready2Frag</a>
+                        </div>
+                        <div id="page-navigation" class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                 <li class="dropdown">
+                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us</a>
+                                     <ul class="dropdown-menu">
+                                         <li><a href="{{ link.pages.about.dc }}">Datacenter &amp; Network</a></li>
+                                         <li><a href="{{ link.pages.about.features }}">Features</a></li>
+                                         <li><a href="{{ link.pages.whmcs.ticket }}">Contact Us</a></li>
+                                     </ul>
+                                 </li>
+                                 <li>
+                                     <a href="{{ link.pages.game_servers }}">Gaming</a>
+                                 </li>
+                                 <li>
+                                     <a href="{{ link.pages.dedicated_servers }}">Dedicated</a>
+                                 </li>
+                                 <li>
+                                     <a href="{{ link.pages.vps }}">VPS</a>
+                                 </li>
+                             </ul>
+                         </div>
+                    </div>
+                </nav>
+            </div>
+        {% endblock %}
+        {% block content %}{% endblock %}
+    </div>
+    {% block footer %}
+    <footer>
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h2>About Us</h2>
+                        <ul>
+                            <li><a href="{{ link.pages.about.dc }}">Datacenter &amp; Network</a></li>
+                            <li><a href="{{ link.pages.about.features }}">Features</a></li>
+                            <li><a href="{{ link.pages.whmcs.ticket }}">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h2>Services</h2>
+                        <ul>
+                            <li><a href="{{ link.pages.game_servers }}">Game Servers</a></li>
+                            <li><a href="{{ link.pages.dedicated_servers }}">Dedicated Servers</a></li>
+                            <li><a href="{{ link.pages.vps }}">Virtual Private Servers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h2>Clients</h2>
+                        <ul>
+                            <li><a href="{{ link.wmhcs.home }}">Billing Area</a></li>
+                            <li><a href="{{ link.panel }}">Game Server Panel</a></li>
+                            <li><a href="{{ link.panel }}">VPS Panel</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h2>&nbsp;</h2>
+                        <ul>
+                            <li><a href="{{ link.pages.terms_of_service }}">Terms of Service</a></li>
+                            <li><a href="{{ link.pages.privacy_policy }}">Privacy Policy</a></li>
+                            <li><a href="{{ link.pages.whmcs.ticket }}">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row lastrow">
+                    <div class="pull-left">
+                        <a href="{{ link.pages.home }}" class="logo"></a>
+                    </div>
+                    <div class="pull-right">
+                        <a href="{{ link.pages.home }}">Copyright 2014</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+    {% block scripts %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/js/fit.js"></script>
+    <script src="/js/ready2frag.js"></script>
+    {% endblock %}
+</body>
+</html>

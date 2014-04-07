@@ -1,0 +1,2 @@
+/* Copyright 2014 */
+(function(){$(function(){return $(".map").each(function(){return fit($(".banner",this)[0],this,{vAlign:fit.CENTER})}),fit($("footer")[0],$("html")[0],{vAlign:fit.BOTTOM})})}).call(this);
