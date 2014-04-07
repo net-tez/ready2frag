@@ -28,6 +28,8 @@
 @navbar-default-link-active-color:         #000;
 @navbar-default-link-active-bg:            rgba(0, 0, 0, 0.03);
 
+@navbar-inverse-border: transparent;
+
 html, body {
     min-height: 100%;
 }
@@ -158,6 +160,23 @@ html, body {
     }
 }
 
+.sub-navigation {
+    margin-top: -20px;
+    background: #222;
+    padding: 1px;
+}
+
+.navbar-sub {
+    margin: 0px 0 -10px;
+    min-height: 50px;
+
+    .nav li > a {
+        line-height: 50px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
 .slide {
     position: relative;
     height: 239px;
@@ -229,6 +248,10 @@ html, body {
             background: @brand-primary;
             color: #fff;
         }
+    }
+
+    h1 {
+        margin: 10px !important;
     }
 }
 
