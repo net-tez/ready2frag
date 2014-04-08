@@ -8,7 +8,7 @@
 
 			<link href="//ready2frag.com/css/style.css" media="all" rel="stylesheet" type="text/css" />
 			<script type="text/javascript" src="//use.typekit.net/ned2mke.js"></script>
-			<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+			<script type="text/javascript">Typekit.load();</script>
 	
 			{if $livehelpjs}{$livehelpjs}{/if}
 			
@@ -160,7 +160,3 @@
 				
 				<div id="whmcsbody" class="container">
 					<div class="content">
-
-	                <div class="row shaded-bar">
-	                    <h1>Billing Area</h1>
-	                </div>
