@@ -36,6 +36,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Theme::css('main.css') ?>" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Theme::css('form.css') ?>" />
 
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<link href="//ready2frag.com/css/style.css" media="all" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="//use.typekit.net/ned2mke.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -237,7 +238,6 @@
         </div>
     </footer>
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="//ready2frag.com/js/fit.js"></script>
     <script src="//ready2frag.com/js/ready2frag.js"></script>
