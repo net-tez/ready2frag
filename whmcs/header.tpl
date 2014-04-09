@@ -7,6 +7,7 @@
 			{if $systemurl}<base href="{$systemurl}">{/if}
 
 			<link href="//ready2frag.com/css/style.css" media="all" rel="stylesheet" type="text/css" />
+        	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 			<script type="text/javascript" src="//use.typekit.net/ned2mke.js"></script>
 			<script type="text/javascript">Typekit.load();</script>
 	
